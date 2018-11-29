@@ -1,0 +1,28 @@
+{
+  "name": "tweet-stream",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.0.1",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "http": "0.0.0",
+    "nodemon": "^1.18.4",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-scripts": "1.1.4",
+    "socket.io": "^2.1.1",
+    "socket.io-client": "^2.1.1",
+    "twitter": "^1.7.1"
+  },
+  "proxy": "https://localhost:5000",
+  "scripts": {
+    "start": "react-scripts start",
+    "server": "cd src/server/ && nodemon server.js",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start\"",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
